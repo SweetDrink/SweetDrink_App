@@ -1,28 +1,63 @@
-<nav id="navbar" class="uk-width-expand@m">
-  <a href="/" class="a"><em><em id="s">S</em>weet<em id="d">D</em>rinks</em></a>
+<nav id="navbar">
+  <a href="/" class="a log"><em><em id="s">S</em>weet<em id="d">D</em>rinks</em></a>
   <a href="/" class="a"><i class="fas fa-home"></i> Home</a>
   <a href="/info/aboutUs" class="a"><i class="fas fa-users"></i> ¿Quiénes somos?</a>
   <a href="/info/contact" class="a"><i class="fas fa-mobile-alt"></i> Contacto</a>
   <a href="/menu/productos" class="a"><i class="fas fa-bars"></i> Menú</a>
 
   {{#if user}}
-    <div class="dropdown">
+  <div class="dropdown">
     <button onclick="myFunction()" class="dropbtn"><i class="fas fa-user"></i> {{user.name}}</button>
     <div id="myDropdown" class="dropdown-content">
       <form action="/profile/account" method="GET">
-      <button class="btn" type="submit">Mi cuenta</button>
+        <button class="btn" type="submit">Mi cuenta</button>
       </form>
       <form action="/auth/logout" method="POST">
-      <button class="btn danger" type="submit">Cerrar sesión</button>
+        <button class="btn danger" type="submit">Cerrar sesión</button>
       </form>
     </div>
   </div>
   {{else}}
   <form method="GET" action="/auth/signup" class="margin">
-  <button class="button1" type="submit"><strong><i class="fas fa-user-plus"></i> Regístrate</strong></button>
+    <button class="button1" type="submit"><strong><i class="fas fa-user-plus"></i> Regístrate</strong></button>
   </form>
   <form method="GET" action="/auth/login" class="margin2">
-  <button class="button2" type="submit"><strong><i class="fas fa-sign-in-alt"></i> Iniciar sesión</strong></button>
+    <button class="button2" type="submit"><strong><i class="fas fa-sign-in-alt"></i> Iniciar sesión</strong></button>
   </form>
   {{/if}}
+
+  <div class="barras" onclick="openNav()">
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+  </div>
+  <div id="myNav" class="overlay">
+    <a class="closebtn" onclick="closeNav();">&times;</a>
+    <div class="overlay-content">
+      <img class="logoMenu" src="/images/logo.png" />
+      <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn"><i class="fas fa-user"></i> {{user.name}}</button>
+        <div id="myDropdown" class="dropdown-content">
+          <form action="/profile/account" method="GET">
+            <button class="btn" type="submit">Mi cuenta</button>
+          </form>
+          <form action="/auth/logout" method="POST">
+            <button class="btn danger" type="submit">Cerrar sesión</button>
+          </form>
+        </div>
+      </div>
+      <a href="/" class=""><i class="fas fa-home"></i> Home</a>
+      <a href="/info/aboutUs" class=""><i class="fas fa-users"></i> ¿Quiénes somos?</a>
+      <a href="/info/contact" class=""><i class="fas fa-mobile-alt"></i> Contacto</a>
+      <a href="/menu/productos" class=""><i class="fas fa-bars"></i> Menú</a>
+
+      <form method="GET" action="/auth/signup" class="">
+        <button class="button1 B1" type="submit"><strong><i class="fas fa-user-plus"></i> Regístrate</strong></button>
+      </form>
+      <form method="GET" action="/auth/login" class="">
+        <button class="button2 B2" type="submit"><strong><i class="fas fa-sign-in-alt"></i> Iniciar sesión</strong></button>
+      </form>
+    </div>
+  </div>
+
 </nav>

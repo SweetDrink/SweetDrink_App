@@ -27,7 +27,7 @@ const userSchema = new Schema({
     default: "Confirmación pendiente"
   },
     photo: {type: String, 
-    default: "https://cdn.icon-icons.com/icons2/827/PNG/512/user_icon-icons.com_66546.pngs"
+    default: "/images/logo.png"
   }},
   {
     timestamps: {

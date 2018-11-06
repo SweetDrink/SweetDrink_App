@@ -78,7 +78,7 @@ router.post("/register", (req, res) => {
         from: process.env.TWILIO_NUMBER,
         body: 'Gracias por registrarte en SweetDrinks en breve recibirás un correo para confirmar tu cuenta.'
       });
-      res.redirect("/auth/login");
+      res.redirect("/profile/account");
     })
     .catch(err => {
       console.log(err)
