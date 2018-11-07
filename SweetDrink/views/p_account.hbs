@@ -11,9 +11,11 @@
                     <p> <i class="fas fa-envelope"></i> Correo: {{user.email}}</p>
                     <p> <i class="fas fa-mobile"></i> Teléfono cel: {{user.phone}}</p>
                 </div>
+                <div class="ED">
                 <form class="e-form" action="/profile/account/{{user._id}}/edit" method="GET">
                     <button type="submit" class=" edit uk-button uk-button-primary">Editar perfil <i class="fas fa-cog fa-spin"></i></button>
                 </form>
+                </div>
             </div>
         </div>
     </div>

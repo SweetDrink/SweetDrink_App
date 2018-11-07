@@ -96,3 +96,18 @@
   font-size: 17px;
   margin-top: 20px;
 }
+@media screen and (max-width: 425px) {
+  .profile{
+    margin: 0 0 0 -15px;
+    width: 100%;
+  }
+  .mapa{
+    margin: -10% 0 0 0;
+  }
+  .e-form{
+    margin: 0 0 0 0;
+  }
+  .ED{
+    text-align: center;
+  }
+}

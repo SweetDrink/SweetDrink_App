@@ -13,10 +13,89 @@
   width: 50%;
   height: auto;
 }
+.logo3{
+  width: 50%;
+  height: auto;
+}
 #form-login{
   float: right;
   margin: 16% 20% 0 0;
 }
-#main{
+#main, #main2{
   background-color: #0b1521;
+}
+@media screen and (max-width: 1024px) {
+  #form-login{
+    margin: 11% 10% 0 0;
+  }
+  #form-registro{
+    margin: 10% 10% 0 0;
+  }
+  .logo3{
+    width: 50%;
+    height: auto;
+    margin: 80px 0 0 0;
+  }
+  #main2{
+    height: 70vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  #main{
+    margin: 60px 0 0 0;
+  }
+  #main2{
+    height: 90vw;
+  }
+  #form-login{
+    margin: 40px 30px 0px 0px;
+  }
+  #form-registro{
+    float: right;
+    margin: 13% 35px 0 0;
+  }
+  .logo3{
+    width: 50%;
+    height: auto;
+    margin: 50px 0 0 0;
+  }
+  
+}
+@media screen and (max-width: 425px) {
+  .logo{
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+  }
+  #main{
+    height: 800px;
+  }
+  #main2{
+    height: 250vw;
+  }
+  #form-registro{
+    margin: 0 13% 0 0;
+  }
+  #form-login{
+    margin: -10% 5% 0 0;
+  }
+}
+@media screen and (max-width: 320px) {
+  .logo{
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+  }
+  #main{
+    height: 800px;
+  }
+  #main2{
+    height: 300vw;
+  }
+  #form-login{
+    margin: 0 0 0 15%;
+  }
+  #form-registro{
+    margin: 0 0 0 0;
+  }
 }

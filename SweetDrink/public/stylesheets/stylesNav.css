@@ -91,18 +91,67 @@ body {
 .logoMenu{
   margin: 0 0 -110px 0;
 }
-@media screen and (max-width: 1024px) {
-  #navbar{
-    display: none;
-  }
+.exep{
+  margin: 20px 0 0 0;
 }
-@media screen and (max-width: 425px) {
+.logoMenu{
+  display: none;
+}
+.overlay{
+  display: none;
+}
+.dropbtn {
+  background-color: inherit;
+  color: white;
+  padding: 16px;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+.dropdown {
+  position: relative;
+  display: inline;
+  background-color: inherit;
+  margin: 5px 0 0 36%;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;
+
+}
+@media screen and (max-width: 1024px) {
+.dropdown{
+  margin: 0 0 0 0;
+}
+}
+@media screen and (max-width: 768px) {
   #navbar{
     display: flex;
     background-color: #333;
   }
   #navbar em{
-    font-size: 20px;
+    font-size: 25px;
     margin: 11px 0 0 0;
   }
   #navbar .a {
@@ -115,18 +164,67 @@ body {
     display: none;
   }
   .B1{
-    display: initial;
+    display: inline-block;
+  }
+  .FM{
+    display: grid;
   }
   .button2{
     display: none;
   }
+  .FM2{
+    display: grid;
+  }
   .B2{
-    display: inline;
+    display: inline-block;
   }
   .barras {
-    display: inline-block;
+    position: absolute;
     cursor: pointer;
-    margin: 9px 20px 0 0;
+   left: 92%;
+   top: 15px;
+}
+.logoMenu{
+  width: 50%;
+  height: auto;
+  display: inline;
+}
+.normal{
+  display: none;
+}
+.dropbtn {
+  background-color: inherit;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;
 }
 .overlay {
   height: 100%;
@@ -139,6 +237,7 @@ body {
   background-color: rgba(0,0,0, 0.9);
   overflow-x: hidden;
   transition: 0.5s;
+  display: inherit;
 }
 
 .overlay-content {
@@ -168,6 +267,7 @@ body {
   right: 45px;
   font-size: 60px;
   z-index: 1;
+  margin: -35px -35px 0px 0px
 }
 .bar1, .bar2, .bar3 {
     width: 35px;
@@ -189,4 +289,156 @@ body {
     transform: rotate(45deg) translate(-8px, -8px);
 }
 }
+@media screen and (max-width: 425px) {
+  #navbar{
+    display: flex;
+    background-color: #333;
+  }
+  #navbar em{
+    font-size: 20px;
+    margin: 11px 0 0 0;
+  }
+  #navbar .a {
+    display: none;
+  }
+  #navbar .log {
+    display: block;
+  }
+  .button1{
+    display: none;
+  }
+  .B1{
+    display: inline-block;
+  }
+  .FM{
+    display: grid;
+    margin-top: -15%;
+  }
+  .button2{
+    display: none;
+  }
+  .FM2{
+    display: grid;
+  }
+  .B2{
+    display: inline-block;
+  }
+  .barras {
+    position: absolute;
+    cursor: pointer;
+    left: 82%;
+    top: 10px;
+}
+.c{
+  margin: -45px 0 0 0;
+}
+.normal{
+  display: none;
+}
+.dropbtn {
+  background-color: inherit;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
 
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+.dropdown {
+  position: relative;
+  display: contents;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;
+}
+.logoMenu{
+  width: 70%;
+  height: auto;
+  display: initial;
+  margin: 15% 0 0 0;
+}
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: -15%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  z-index: 1;
+  margin: -35px -35px 0px 0px
+}
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #f1f1f1;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+}
