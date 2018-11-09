@@ -142,6 +142,7 @@
 function createItemNode2(itemName){
   console.log('segunda función ',itemName)
   var div = document.createElement('div');
+  div.setAttribute("class", "Icarrito");
   var label = document.createElement('label');
   var data = document.createTextNode(itemName);
   label.appendChild(data);
@@ -150,6 +151,7 @@ function createItemNode2(itemName){
 }
   function createItemNode(itemData){
   var div = document.createElement('div');
+  div.setAttribute("class", "Icarrito");
   var label = document.createElement('label');
   var data = document.createTextNode(itemData);
   data = document.createTextNode('$ ' + itemData);
@@ -161,6 +163,7 @@ function createItemNode2(itemName){
 }
   function createQuantityInput(){
     var div = document.createElement('div');
+    div.setAttribute("class", "Icarrito");
   var label = document.createElement('label');
   var input = document.createElement('input');
   var data = document.createTextNode('Qty ');
@@ -175,6 +178,7 @@ function createItemNode2(itemName){
   }
   function createQuantityNode(){
   var div = document.createElement('div');
+  div.setAttribute("class", "Icarrito");
   var label = document.createElement('label');
   var price = document.createTextNode('$0.00');
   label.setAttribute('class','totalPrice');
@@ -185,6 +189,7 @@ function createItemNode2(itemName){
 }
   function createDeleteButton(){
   var div = document.createElement('div');
+  div.setAttribute("class", "Icarrito");
   var button = document.createElement('button');
   var del = document.createTextNode('Delete');
   button.setAttribute('class','btn btn-delete');
