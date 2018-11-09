@@ -16,6 +16,7 @@
   position: absolute;
   top: 17px;
   right: 18%;
+  z-index: inherit;
 }
 .tituloC{
   text-align: center;

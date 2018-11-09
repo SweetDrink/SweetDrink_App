@@ -18,7 +18,6 @@ const userSchema = new Schema({
       unique: true
     },
     date: Date,
-    password: String,
     confirmationCode: {
       type:String,
       unique: true

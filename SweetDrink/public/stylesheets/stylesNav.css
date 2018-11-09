@@ -141,8 +141,24 @@ body {
 
 }
 @media screen and (max-width: 1024px) {
-.dropdown{
-  margin: 0 0 0 0;
+  .dropdown {
+    position: relative;
+    display: inline;
+    background-color: inherit;
+    margin: 5px 0 0 14%;
+}
+.dropbtn {
+  font-size: 16px;
+}
+#btnCarrito {
+  border-radius: 10px;
+  background-color: inherit;
+  position: absolute;
+  top: 17px;
+  z-index: inherit;
+  right: 18%;
+  padding: 0px 35px 0px 0px;
+  margin: -8px -10px 0px 0px;
 }
 }
 @media screen and (max-width: 768px) {

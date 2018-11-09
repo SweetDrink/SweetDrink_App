@@ -2,15 +2,15 @@
   margin: 60px 0 0 0;
   width: 70%;
 }
+.confirm{
+  padding: 320px 0 200px 0;
+}
 .per{
   margin-top: 80px;
   margin-bottom: 80px;
 }
 .edit{
   align-items: center;
-}
-.e-form{
-  margin: 0 0 0 26%;
 }
 #map {
   width: 100%;
@@ -96,6 +96,27 @@
   font-size: 17px;
   margin-top: 20px;
 }
+@media screen and (max-width: 1024px) {
+  .mapa{
+    margin: -66% 5% 0 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .per {
+    margin-top: 80px;
+    margin-bottom: 75px;
+  }
+  .cartaU{
+    width: 60%;
+    margin: -28px 0px 0 -20px;
+  }
+  .mapa{
+    float: right;
+    margin: -90% 0% 0 0;
+    width: 55%;
+  }
+}
+
 @media screen and (max-width: 425px) {
   .profile{
     margin: 0 0 0 -15px;
@@ -103,11 +124,14 @@
   }
   .mapa{
     margin: -10% 0 0 0;
-  }
-  .e-form{
-    margin: 0 0 0 0;
+    width: 100%;
   }
   .ED{
     text-align: center;
   }
+  .cartaU{
+    width: 100%;
+    margin: 0px 0px 0 0px;
+  }
 }
+

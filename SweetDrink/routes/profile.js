@@ -32,7 +32,6 @@ router.post("/account/:id/edit",commonMiddlewares.isLoggedIn, upload.single("pho
   if (req.file !== undefined) req.body.photo = req.file.url;
   User.findByIdAndUpdate(req.params.id, { $set: req.body}, {new: true})
   .then(()=>{
-    console.log(req.body.photo)
     res.redirect("/profile/account");
   })
   .catch(err=>{
