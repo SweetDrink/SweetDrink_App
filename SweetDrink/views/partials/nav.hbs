@@ -6,7 +6,7 @@
   <a href="/menu/productos" class="a"><i class="fas fa-cocktail"></i> Menú</a>
 
   {{#if user}}
-  <!-- carrito -->
+    <!-- carrito -->
 
   <!-- Trigger/Open The Modal -->
   <button id="btnCarrito" class="uk-button uk-button-primary"><i class="fas fa-cart-plus"></i> Carrito</i></button>
@@ -26,39 +26,22 @@
             <tr>
               <th>Descripción</th>
               <th>Precio/U</th>
-              <th>Cantidad</th>
-              <th>Total</th>
             </tr>
           </tbody>
         </table>
         <div id="productsList">
           <div class="content" id="tCarrito">
-            <div>
-              <label>IronBubble-head</label>
-            </div>
-            <div>
-              <label class="unitPrice">$25.00</label>
-            </div>
-            <div>
-              <label for="inputQuatity">Qty</label>
-              <input type="number" class="inputQuatity">
-            </div>
-            <div>
-              <label class="totalPrice">$0.00</label>
-            </div>
-            <div>
-              <button class="btn btn-delete">Delete</button>
-            </div>
           </div>
         </div>
       </div>
       <div class="modal-footer-carrito">
-        <form action="/menu/carrito" method="GET">
+        <h2 class="Tprices">Total: $ <em id="Tprice"></em></h2>
+        <form action="/menu/carrito" method="POST">
             <script
               src="https://checkout.stripe.com/checkout.js" class="stripe-button"
               data-key="pk_test_epuiqKESrji9Ae5A3KlGduyb"
               data-amount="999"
-              data-name="tu app"
+              data-name="SweetDrinks"
               data-description="Your paiment"
               data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
               data-locale="auto">
@@ -82,70 +65,6 @@
     </div>
   </div>
   {{else}}
-  <!-- carrito -->
-
-  <!-- Trigger/Open The Modal -->
-  <button id="btnCarrito" class="uk-button uk-button-primary"><i class="fas fa-cart-plus"></i> Carrito</i></button>
-
-  <!-- The Modal -->
-  <div id="modalCarrito" class="carritoModal">
-
-    <!-- Modal content -->
-    <div class="modal-content-carrito">
-      <div class="modal-header-carrito">
-        <span class="closeCarrito">&times;</span>
-        <h2 class="tituloC"><i class="fas fa-shopping-cart fa-1x"> </i> Carrito</h2>
-      </div>
-      <div id="tableCarrito" class="modal-body-carrito">
-        <table>
-          <tbody>
-            <tr>
-              <th>Descripción</th>
-              <th>Precio/U</th>
-              <th>Cantidad</th>
-              <th>Total</th>
-            </tr>
-          </tbody>
-        </table>
-        <div id="productsList">
-          <div class="content" id="tCarrito">
-            <div>
-              <label>IronBubble-head</label>
-            </div>
-            <div>
-              <label class="unitPrice">$25.00</label>
-            </div>
-            <div>
-              <label for="inputQuatity">Qty</label>
-              <input type="number" class="inputQuatity">
-            </div>
-            <div>
-              <label class="totalPrice">$0.00</label>
-            </div>
-            <div>
-              <button class="btn btn-delete">Delete</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="modal-footer-carrito">
-        <form action="/menu/carrito" method="GET">
-            <script
-              src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-              data-key="pk_test_epuiqKESrji9Ae5A3KlGduyb"
-              data-amount="999"
-              data-name="tu app"
-              data-description="Your paiment"
-              data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
-              data-locale="auto">
-            </script>
-          </form>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- carrito -->
   <form method="GET" action="/auth/signup" class="margin">
     <button class="button1" type="submit"><strong><i class="fas fa-user-plus"></i> Regístrate</strong></button>
   </form>

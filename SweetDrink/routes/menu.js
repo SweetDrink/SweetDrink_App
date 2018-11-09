@@ -2,6 +2,9 @@ const express = require("express");
 const router = express.Router();
 const User = require("../models/User");
 const Producto = require("../models/Producto");
+const Pedido = require("../models/Pedido");
+const twilio = require('twilio');
+const client = new twilio(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN);
 const commonMiddlewares = require("../helpers/commonMiddlewares");
 
 router.get("/productos", (req, res) => {
@@ -71,7 +74,23 @@ router.get("/carrito",commonMiddlewares.isLoggedIn, (req,res)=>{
 });
 
 router.post("/carrito", commonMiddlewares.isLoggedIn,(req,res)=>{
-
+const newPedido = new Pedido({
+  _user: req.user,
+  _items: req.body.items,
+  total: req.body.total 
+});
+newPedido.save()
+.then((pedido)=>{
+  client.messages.create({
+    to: '+525534690871',
+    from: process.env.TWILIO_NUMBER,
+    body: 'Gracias por confiar en SweetDrinks en breve recibirás una llamada para confirmar tu pedido.'
+  });
+console.log("Se ha guardado ", {pedido})
+})
+.catch((err)=>{
+  console.log(err, "se produjo un error")
+})
 })
 
 module.exports = router;

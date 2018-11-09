@@ -125,17 +125,43 @@
   
 </main>
 <script>
-  function createNewItemRow(itemUnitPrice, itemName){ 
-  //var nombre = document.getElementsByClassName("nombre-producto");
+  const buttonSubmit = document.querySelectorAll('.stripe-button-el');
+  let itemPrices = [];
+  var itemsId = [];
+
+  function createNewItemRow(itemUnitPrice, itemName, itemId){ 
   console.log(itemName)
   var div = document.createElement('div');
   div.setAttribute("class", "Scarrito");
   div.appendChild(createItemNode2(itemName));
   div.appendChild(createItemNode(itemUnitPrice));
-  div.appendChild(createQuantityInput());
-  div.appendChild(createQuantityNode());  
+  //div.appendChild(createQuantityInput());
+  //div.appendChild(createQuantityNode());  
   div.appendChild(createDeleteButton());
-  console.log(div)
+  console.log(div);
+  itemsId.push(itemId)
+  itemPrices.push(itemUnitPrice);
+  let totalPedido = itemPrices.reduce((sum, val)=>{
+    return sum + val;
+  })
+  document.getElementById("Tprice").innerHTML = totalPedido;
+   console.log(itemPrices);
+   console.log('=====>', totalPedido);
+  buttonSubmit[0].onclick = function() { 
+     console.log('=====>', totalPedido);
+     const newPedido = {
+       items: [itemId],
+       total: totalPedido,
+     }
+     console.log(newPedido.items)
+     axios.post('http://localhost:3000/menu/carrito', newPedido)
+     .then((order)=>{
+       console.log("GUARDADO")
+     })
+     .catch((err)=>{
+       console.log(err, "hay un error")
+     })
+   };
   document.getElementById("tCarrito").appendChild(div);
   return div;
 }
@@ -147,6 +173,7 @@ function createItemNode2(itemName){
   var data = document.createTextNode(itemName);
   label.appendChild(data);
   div.appendChild(label);
+  
   return div;
 }
   function createItemNode(itemData){

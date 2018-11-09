@@ -11,10 +11,11 @@
 
 /* The Modal carrito (background) */
 #btnCarrito{
-  font-size: 15px;
-  opacity: 1;
   border-radius: 10px;
-  margin: 8px 0 16px 18%;
+  background-color: inherit;
+  position: absolute;
+  top: 17px;
+  right: 18%;
 }
 .tituloC{
   text-align: center;
