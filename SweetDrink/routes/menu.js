@@ -61,15 +61,17 @@ router.get("/productos", (req, res) => {
   })
 });
 
-router.get("/carrito", commonMiddlewares.isLoggedIn, (req,res)=>{
+router.get("/carrito",commonMiddlewares.isLoggedIn, (req,res)=>{
   const {user} = req;
   User.find()
   .then(()=>{
-    Producto.find({type: "Servicios"})
-  .then(servicio=>{
-    res.render("carrito", {servicio, user})
-  });
-  });
+    console.log(user)
+    res.render("carrito", {user})
+  })
 });
+
+router.post("/carrito", commonMiddlewares.isLoggedIn,(req,res)=>{
+
+})
 
 module.exports = router;

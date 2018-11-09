@@ -3,12 +3,10 @@
     <div class="uk-card-media-top">
       <img src="{{image}}" alt="{{name}}" style="max-height: 200px;">
       <div class=" uk-card-body">
-        <h3 class="uk-card-title">{{name}} {{Qty}}</h3>
+        <h3 class="uk-card-title nombre-producto">{{name}} {{Qty}}</h3>
         <p>{{type}}</p>
         <h2>$ {{price}}</h2>
-        <form action="/menu/carrito" method="GET">
-          <button type="submit" class="carrito uk-button uk-button-primary uk-button-small"><i class="fas fa-cart-plus"></i> Agregar al carrito</button>
-        </form>
+        <button id="agregar" onclick="createNewItemRow({{price}}, '{{name}}')" class="add-to-cart carrito uk-button uk-button-primary uk-button-small"><i class="fas fa-cart-plus"></i> Agregar al carrito</button>
       </div>
     </div>
   </div>

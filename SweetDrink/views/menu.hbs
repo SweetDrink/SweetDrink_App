@@ -1,6 +1,4 @@
 <main>
-  <header>
-  </header>
   <div id="items">
     <div class="container" uk-parallax="background-color:  white,#0b1521;">
       <h1 class="apartado">Cervezas</h1>
@@ -123,4 +121,78 @@
       </div>
     </div>
   </div>
+
+  
 </main>
+<script>
+  function createNewItemRow(itemUnitPrice, itemName){ 
+  //var nombre = document.getElementsByClassName("nombre-producto");
+  console.log(itemName)
+  var div = document.createElement('div');
+  div.setAttribute("class", "Scarrito");
+  div.appendChild(createItemNode2(itemName));
+  div.appendChild(createItemNode(itemUnitPrice));
+  div.appendChild(createQuantityInput());
+  div.appendChild(createQuantityNode());  
+  div.appendChild(createDeleteButton());
+  console.log(div)
+  document.getElementById("tCarrito").appendChild(div);
+  return div;
+}
+function createItemNode2(itemName){
+  console.log('segunda función ',itemName)
+  var div = document.createElement('div');
+  var label = document.createElement('label');
+  var data = document.createTextNode(itemName);
+  label.appendChild(data);
+  div.appendChild(label);
+  return div;
+}
+  function createItemNode(itemData){
+  var div = document.createElement('div');
+  var label = document.createElement('label');
+  var data = document.createTextNode(itemData);
+  data = document.createTextNode('$ ' + itemData);
+  label.setAttribute('class','unitPrice');
+  label.appendChild(data);
+  div.appendChild(label);
+  //document.getElementById("tCarrito").appendChild(div);
+  return div;
+}
+  function createQuantityInput(){
+    var div = document.createElement('div');
+  var label = document.createElement('label');
+  var input = document.createElement('input');
+  var data = document.createTextNode('Qty ');
+  input.setAttribute('class','inputQuatity');
+  input.setAttribute('type','number');
+  label.setAttribute('for','inputQuatity');
+  label.appendChild(data);
+  div.appendChild(label);
+  div.appendChild(input);
+  //document.getElementById("tCarrito").appendChild(div);
+  return div;
+  }
+  function createQuantityNode(){
+  var div = document.createElement('div');
+  var label = document.createElement('label');
+  var price = document.createTextNode('$0.00');
+  label.setAttribute('class','totalPrice');
+  label.appendChild(price);
+  div.appendChild(label);
+  //document.getElementById("tCarrito").appendChild(div);
+  return div;
+}
+  function createDeleteButton(){
+  var div = document.createElement('div');
+  var button = document.createElement('button');
+  var del = document.createTextNode('Delete');
+  button.setAttribute('class','btn btn-delete');
+  button.appendChild(del);
+  div.appendChild(button);
+  //document.getElementById("tCarrito").appendChild(div);
+  return div;
+}
+
+
+</script>

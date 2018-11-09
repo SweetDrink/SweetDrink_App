@@ -2,12 +2,13 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const pedidoSchema = new Schema({
-  name: String,
+  _user: {type: Schema.Type.ObjectId, ref: "User". required: true},
   mail: String,
   pay: String,
   phone: Number,
-  items: Array,
-  total: Number
+  items: {type: Schema.Type.ObjectId, ref: "Producto". required: true},
+  qty: Number, 
+  total: Number,
 },
 {
   timestamps: {
