@@ -110,3 +110,8 @@ td, th {
 .Icarrito{
   margin: 0 32px 0 10px;
 }
+@media screen and (max-width: 425px) {
+  .modal-content-carrito{
+    width: 100%;
+  }
+}
