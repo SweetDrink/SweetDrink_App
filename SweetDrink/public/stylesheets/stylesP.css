@@ -96,6 +96,12 @@
   font-size: 17px;
   margin-top: 20px;
 }
+@media screen and (max-width: 2560px) {
+  .mapa {
+    float: right;
+    margin: -25% 4% 0 0;
+}
+}
 @media screen and (max-width: 1800px) {
   .mapa {
     float: right;
@@ -128,7 +134,7 @@
   }
   .mapa{
     float: right;
-    margin: -90% 0% 0 0;
+    margin: -92% 0% 0 0;
     width: 55%;
   }
 }
